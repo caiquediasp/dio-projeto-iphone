@@ -1,16 +1,13 @@
-public class NavegadorInternet {
-    String urlSite;
-
-    public void exibirPagina(String url) {
-        this.urlSite = url;
+public interface NavegadorInternet {
+    public default void exibirPagina(String url) {
         System.out.println("Pagina sendo exibida!");
     }
 
-    public void adicionarNovaAba() {
+    public default void adicionarNovaAba() {
         System.out.println("Nova aba adicionada!");
     }
 
-    public void atualizarPagina() {
+    public default void atualizarPagina() {
         System.out.println("Pagina atualizada!");
     }
 }

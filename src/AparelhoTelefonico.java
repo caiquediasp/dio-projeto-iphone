@@ -1,20 +1,16 @@
-import java.util.List;
-
-public class AparelhoTelefonico {
-    List <String> contatos;
-
-    public void ligar(String numero) {
+public interface AparelhoTelefonico {
+    public default void ligar(String numero) {
         System.out.println("Ligando para: " + numero);
     }
 
-    public boolean atender(String escolha) {
-         if (escolha == "YES") {
+    public default boolean atender(boolean escolha) {
+         if (escolha) {
             return true;
          } 
          return false;
     }
 
-    public void iniciarCorreioVoz(String numero) {
+    public default void iniciarCorreioVoz(String numero) {
         System.out.println("Correio de voz iniciado para: " + numero);
     }
 }
